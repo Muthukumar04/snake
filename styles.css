@@ -1,0 +1,11 @@
+.grid {
+  display: grid;
+}
+
+.grid > * {
+  border: thin solid black;
+}
+
+.headCell {
+  background-color: red;
+}
