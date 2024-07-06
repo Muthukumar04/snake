@@ -10,7 +10,7 @@ const ARROW_KEYS = {
 
 const CLASSES = {
   GRID: "grid",
-  HEAD_CELL: "headCell",
+  HEAD: "head",
 };
 
 const INITIAL_HEAD_POSITION = { col: 0, row: 0 };
@@ -41,7 +41,7 @@ function createCell(row, col) {
 
 function createHead(row, col) {
   const headCell = getCell(row, col);
-  headCell.classList.add(CLASSES.HEAD_CELL);
+  headCell.classList.add(CLASSES.HEAD);
 }
 
 function attachOnMoveEvent(callback) {
@@ -98,9 +98,9 @@ function onMove(currentHeadPosition, arrowKey, callback) {
 
 function moveHead(fromPosition, toPosition, callback) {
   const currentHeadCell = getCell(fromPosition.row, fromPosition.col);
-  currentHeadCell.classList.toggle(CLASSES.HEAD_CELL);
+  currentHeadCell.classList.toggle(CLASSES.HEAD);
   const movedHeadCell = getCell(toPosition.row, toPosition.col);
-  movedHeadCell.classList.toggle(CLASSES.HEAD_CELL);
+  movedHeadCell.classList.toggle(CLASSES.HEAD);
   callback(toPosition);
 }
 

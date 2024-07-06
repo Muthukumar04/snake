@@ -6,6 +6,10 @@
   border: thin solid black;
 }
 
-.headCell {
+.head {
   background-color: red;
+}
+
+.body {
+  background-color: green;
 }
